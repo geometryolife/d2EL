@@ -93,17 +93,21 @@
 | <++>                  | <++>           |
 | <++>                  | <++>           |
 
-| Function              | Effect                         |
-|-----------------------|--------------------------------|
-| message               | 显示信息                       |
-| eval-buffer           | 执行整个缓冲区                 |
-| load-theme            | 加载主题                       |
-| customize-group       | 选择插件，进入插件配置         |
-| package-autoromove    | 移除不用的包                   |
-| package-list-packages | 进入包管理器对插件进行管理操作 |
-| <++>                  | <++>                           |
-| <++>                  | <++>                           |
-| <++>                  | <++>                           |
+| Function                | Effect                         |
+|-------------------------|--------------------------------|
+| message                 | 显示信息                       |
+| eval-buffer             | 执行整个缓冲区                 |
+| load-theme              | 加载主题                       |
+| customize-group         | 选择插件，进入插件配置         |
+| package-autoromove      | 移除不用的包                   |
+| package-list-packages   | 进入包管理器对插件进行管理操作 |
+| global-auto-revert-mode | 全局自动恢复模式               |
+| define-minor-mode       | 定义新的次要模式               |
+| ring-bell-function      | 响铃函数                       |
+| <++>                    | <++>                           |
+| <++>                    | <++>                           |
+| <++>                    | <++>                           |
+| <++>                    | <++>                           |
 
 | Key Word      | Effect                  |
 |---------------|-------------------------|
