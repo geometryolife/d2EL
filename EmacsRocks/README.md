@@ -75,7 +75,7 @@
 | `C-x` `t` `o`        | 跳转到下一个标签（循环）           |
 | `C-x` `t` `b`        | 在新缓冲区打开一个新标签           |
 | `C-x` `C-e`          | 执行最后一条符号表达式             |
-| `<++>` `<++>`        | <++>                               |
+| `C-x` `d`            | 打开目录                           |
 | `<++>` `<++>`        | <++>                               |
 | `<++>` `<++>` `<++>` | <++>                               |
 
@@ -93,34 +93,42 @@
 | <++>                  | <++>           |
 | <++>                  | <++>           |
 
-| Function                | Effect                         |
-|-------------------------|--------------------------------|
-| message                 | 显示信息                       |
-| eval-buffer             | 执行整个缓冲区                 |
-| load-theme              | 加载主题                       |
-| customize-group         | 选择插件，进入插件配置         |
-| package-autoromove      | 移除不用的包                   |
-| package-list-packages   | 进入包管理器对插件进行管理操作 |
-| global-auto-revert-mode | 全局自动恢复模式               |
-| define-minor-mode       | 定义新的次要模式               |
-| ring-bell-function      | 响铃函数                       |
-| <++>                    | <++>                           |
-| <++>                    | <++>                           |
-| <++>                    | <++>                           |
-| <++>                    | <++>                           |
+| Function                         | Effect                         |
+|----------------------------------|--------------------------------|
+| message                          | 显示信息                       |
+| eval-buffer                      | 执行整个缓冲区                 |
+| load-theme                       | 加载主题                       |
+| customize-group                  | 选择插件，进入插件配置         |
+| package-autoromove               | 移除不用的包                   |
+| package-list-packages            | 进入包管理器对插件进行管理操作 |
+| global-auto-revert-mode          | 全局自动恢复模式               |
+| define-minor-mode                | 定义新的次要模式               |
+| ring-bell-function               | 响铃函数                       |
+| byte-compile-file                | 把.el文件编译成.elc文件        |
+| update-directory-autoloads       |                                |
+| indent-region                    |                                |
+| indent-buffer                    |                                |
+| region-active-p                  |                                |
+| hippie-expand                    |                                |
+| hippie-expand-try-functions-list | 补全列表                       |
+| <++>                             | <++>                           |
+| <++>                             | <++>                           |
+| <++>                             | <++>                           |
 
-| Key Word      | Effect                  |
-|---------------|-------------------------|
-| `setq`        | 定义变量                |
-| `defun`       | 定义函数                |
-| `require`     | 引入 Emacs 文件中的功能 |
-| `unless`      | <++>                    |
-| `dolist`      | 循环列表                |
-| `when`        | 条件判断                |
-| `interactive` | 交互式调用              |
-| `<++>`        | <++>                    |
-| `<++>`        | <++>                    |
-| `<++>`        | <++>                    |
+| Key Word               | Effect                  |
+|------------------------|-------------------------|
+| `setq`                 | 定义变量                |
+| `defun`                | 定义函数                |
+| `require`              | 引入 Emacs 文件中的功能 |
+| `unless`               |                         |
+| `dolist`               | 循环列表                |
+| `when`                 | 条件判断                |
+| `interactive`          | 交互式调用              |
+| `save-excursion`       |                         |
+| `progn`                |                         |
+| `with-eval-after-load` | <++>                    |
+| `<++>`                 | <++>                    |
+| `<++>`                 | <++>                    |
 
 | Variable                  | Effect                         |
 |---------------------------|--------------------------------|
