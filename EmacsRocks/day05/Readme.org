@@ -1,5 +1,4 @@
 * Spacemacs Rocks Season 2 (Day 5)
-
 ** Fix smartparen quote issue
 #+BEGIN_SRC emacs-lisp
   (define-advice show-paren-function (:around (fn) fix-show-paren-function)
@@ -107,9 +106,9 @@ toggle indent in web-mode
 ** expand-region and iedit mode
 
 ** Bonus Time. Org export
-export to html,  you could also export to pdf
+export to html,  you could also export to pdf.
 
-=C-x C-e=
+=C-c C-e=
 
 ** Exercises
 1. Learn how to use emmet-mode to do zen coding: https://github.com/smihica/emmet-mode
