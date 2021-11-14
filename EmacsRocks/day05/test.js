@@ -11,7 +11,6 @@ function sayHello(name) {
 var obj = {
     concatString: function () {
 	for (var i = 0; i < 10; ++i) {
-	    
 	    var s1 = "hello";
 	}
 	var s2 = "world";
@@ -27,4 +26,3 @@ var obj = {
 
     }
 };
-
