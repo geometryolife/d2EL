@@ -1,0 +1,37 @@
+* 学习使用 SPACEMACS
+** 收获
+   1. fullscreen-at-startup 和 maximized-at-startup 区别?
+      前者全屏，后者最大化启动界面。
+   2. dotspacemacs-excluded-packages
+      把不想安装和加载的包添加到此。
+   3. dotspacemacs/user-config
+      在没有学会如何编写自己的 layer 之前，尽量把配置放在这个函数里。
+** HotKeys
+*** f
+| HotKey    | Command                | Effect           |
+|-----------+------------------------+------------------|
+| SPC-f-e-d | Open Spacemacs dotfile | 打开个人配置文件 |
+| SPC-f-j   | dired-jump             | 打开 Dired mode  |
+| SPC-f-e-R | Reload configuration   | 重载配置         |
+
+*** h
+| HotKey    | Command            | Effect |
+| SPC-h-SPC | ivy-spacemacs-help | 查找文档或配置 |
+
+*** w
+| HotKey  | Command         | Effect           |
+| SPC-w-m | maximize-buffer | 最大化当前缓冲区 |
+
+*** q
+| HotKey  | Command           | Effect     |
+| SPC-q-q | prompt-kill-emacs | 退出 Emacs |
+
+*** s
+| HotKey  | Command             | Effect |
+| SPC-s-j | helm-jump-in-buffer |        |
+
+*** Dired mode
+| HotKey | Command | Effect       |
+| +      |         | 创建目录     |
+| R      |         | 移动、重命名 |
+| q      |         | 退出         |
