@@ -6,7 +6,22 @@
       把不想安装和加载的包添加到此。
    3. dotspacemacs/user-config
       在没有学会如何编写自己的 layer 之前，尽量把配置放在这个函数里。
+   4. use-package => defer t
+      defer 关键字要放在 init 前面。
+   5. layer 函数调用顺序
+      pre-init-PACKAGE => init-PACKAGE => post-init-PACKAGE。
+      如果 Spacemacs 自带了 PACKAGE 要自定义一些配置，通常设置最后一个即可。
 ** HotKeys
+*** b
+| HotKey  | Command      | Effect               |
+| SPC-b-b | list-buffers | 列出缓冲区、跳转 |
+|         |              |                      |
+
+*** d
+| HotKey    | Command           | Effect   |
+| SPC-h-d-v | describe-variable | 描述变量 |
+|           |                   |          |
+
 *** f
 | HotKey    | Command                | Effect           |
 |-----------+------------------------+------------------|
@@ -14,9 +29,20 @@
 | SPC-f-j   | dired-jump             | 打开 Dired mode  |
 | SPC-f-e-R | Reload configuration   | 重载配置         |
 
+*** g
+| HotKey  | Command      | Effect              |
+| SPC-g-s | magit-status | 使用 magit 查看状态 |
+|         |              |                     |
+
 *** h
-| HotKey    | Command            | Effect |
-| SPC-h-SPC | ivy-spacemacs-help | 查找文档或配置 |
+| HotKey    | Command             | Effect         |
+| SPC-h-SPC | ivy-spacemacs-help  | 查找文档或配置 |
+| SPC-h-R   | counsel-search-docs |                |
+
+*** o
+| HotKey | Command       | Effect                                   |
+| SPC-o  | user bindings | Spacemacs 提供给用户自定义快捷键的前缀键 |
+|        |               |                                          |
 
 *** w
 | HotKey  | Command         | Effect           |
@@ -30,8 +56,33 @@
 | HotKey  | Command             | Effect |
 | SPC-s-j | helm-jump-in-buffer |        |
 
+*** t
+| HotKey  | Command           | Effect |
+| SPC-t-S | spelling-checking | 拼写检查开关 |
+
+
+*** S
+| HotKey  | Command                  | Effect       |
+| SPC-S-c | flyspell-correct-wrapper | 修正拼写错误 |
+|         |                          |              |
+
+*** ,
+| HotKey | Command                   | Effect |
+| ,-d    | debug                     | 调试   |
+| ,-d-m  | macrostep-transient-state | 调试宏 |
+|        |                           |        |
+
+*** C-key
+| HotKey | Command | Effect                   |
+| C-s    | Swiper  | 搜索，需要添加 ivy layer |
+
 *** Dired mode
 | HotKey | Command | Effect       |
 | +      |         | 创建目录     |
 | R      |         | 移动、重命名 |
 | q      |         | 退出         |
+
+** Commands
+| Command                          | Effect   |
+| counsel-set-variable             | 设置变量 |
+| configuration-layer/create-layer | 创建 layer |
