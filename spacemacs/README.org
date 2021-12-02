@@ -11,6 +11,7 @@
    5. layer 函数调用顺序
       pre-init-PACKAGE => init-PACKAGE => post-init-PACKAGE。
       如果 Spacemacs 自带了 PACKAGE 要自定义一些配置，通常设置最后一个即可。
+   6. find-file-in-project 插件
 ** 14th day
 *** 未加入的配置
     1. SPC-p-f 没有配置进入我的配置
@@ -83,20 +84,30 @@
 | SPC-h-SPC | ivy-spacemacs-help  | 查找文档或配置 |
 | SPC-h-R   | counsel-search-docs |                |
 
+*** l
+| HotKey      | Command                | Effect           |
+| SPC-l-<Tab> | last layout            | 上一个布局       |
+| SPC-l-l     | another layout         | 切换到其他布局   |
+| SPC-l-o     | custom layout          | 自定义布局       |
+| SPC-l-r     | remove current buffer  | 可能存在 Bug     |
+| SPC-l-s     | save all layouts       | 保存所有布局     |
+| SPC-l-L     | load layouts from file | 从文件中加载布局 |
+| SPC-l-R     | rename current layout  | 重命名当前布局   |
+| SPC-l-S     | save by name           | 保存到现有名称中 |
+| SPC-l-?     | toggle help            | 帮助开关         |
+
 *** o
 | HotKey | Command       | Effect                                   |
 | SPC-o  | user bindings | Spacemacs 提供给用户自定义快捷键的前缀键 |
-|        |               |                                          |
 
-*** w
-| HotKey  | Command         | Effect           |
-| SPC-w-m | maximize-buffer | 最大化当前缓冲区 |
 
 *** p
-| HotKey  | Command                             | Effect             |
-| SPC-p-b | counsel-projectile-switch-to-buffer | 切换已激活的缓冲区 |
-| SPC-p-f | counsel-projectile-find-file        | 查找打开过的文件   |
-| SPC-p-g | projectile-find-tag                 | 查找项目标签       |
+| HotKey  | Command                             | Effect                      |
+| SPC-p-b | counsel-projectile-switch-to-buffer | 切换已激活的缓冲区          |
+| SPC-p-f | counsel-projectile-find-file        | 查找打开过的文件            |
+| SPC-p-g | projectile-find-tag                 | 查找项目标签                |
+| SPC-p-l | ivy-persp-switch-project            | 选择项目文件创建视图 layout |
+| SPC-p-p | counsel-projectile-switch-project   | 在已打开的 Git 项目间切换   |
 
 *** q
 | HotKey  | Command           | Effect     |
@@ -107,8 +118,35 @@
 | SPC-s-j | helm-jump-in-buffer |        |
 
 *** t
-| HotKey  | Command           | Effect |
-| SPC-t-S | spelling-checking | 拼写检查开关 |
+| HotKey    | Command           | Effect         |
+| SPC-t-<-> | centered-point    | 光标永远在中间 |
+| SPC-t-g   | golden-ratio      | 黄金分割开关   |
+| SPC-t-S   | spelling-checking | 拼写检查开关   |
+
+*** w
+| HotKey      | Command                     | Effect                   |
+| SPC-w-<Tab> | alternate-window            |                          |
+| SPC-w-<+>   | window-layout-toggle        |                          |
+| SPC-w-<->   | split-window-below          | 切分窗口到下面           |
+| SPC-w-=     | balance-window-area         | 均等分窗口               |
+| SPC-w-.     | window-transient-state      | 对瞬态窗口更多操作       |
+| SPC-w-/     | split-window-right          | 切分窗口到右边           |
+| SPC-w-1     | window-split-single-column  | 单个窗口                 |
+| SPC-w-2     | window-split-double-columns | 两列窗口                 |
+| SPC-w-3     | window-split-triple-columns | 三列窗口                 |
+| SPC-w-4     | window-split-grid           | 田字形排列               |
+| SPC-w-b     | switch-to-minibuffer-window | 切换到 迷你缓冲区        |
+| SPC-w-d     | delete-window               | 删除当前窗口             |
+| SPC-w-hjkl  | evil-window                 | 移动光标                 |
+| SPC-w-m     | maximize-buffer             | 最大化当前缓冲区         |
+| SPC-w-o     | other-frame                 | 切换 Frame               |
+| SPC-w-u     | winner-undo                 | 窗口撤销                 |
+| SPC-w-w     | other-window                | 光标在当前所有窗口中滚动 |
+| SPC-w-F     | make-frame                  | 创建 Frame               |
+| SPC-w-HJKL  | evil-window-move            | 移动窗口                 |
+| SPC-w-U     | winner-redo                 | 窗口重做                 |
+| SPC-w-W     | ace-window                  | 标识跳转窗口             |
+|             |                             |                          |
 
 
 *** S
