@@ -84,6 +84,14 @@
 | SPC-h-SPC | ivy-spacemacs-help  | 查找文档或配置 |
 | SPC-h-R   | counsel-search-docs |                |
 
+*** i
+*** j
+| HotKey  | Command       | Effect             |
+| SPC-j-f | find-function | 查找函数所在的位置 |
+| SPC-j-v | find-variable | 查找变量所在的位置 |
+| SPC     |               |                    |
+
+*** k
 *** l
 | HotKey      | Command                | Effect           |
 | SPC-l-<Tab> | last layout            | 上一个布局       |
@@ -177,6 +185,11 @@
 | q      |         | 退出         |
 
 ** Commands
-| Command                          | Effect   |
-| counsel-set-variable             | 设置变量 |
-| configuration-layer/create-layer | 创建 layer |
+| Command                          | Effect             |
+| counsel-set-variable             | 设置变量           |
+| configuration-layer/create-layer | 创建 layer         |
+| visit-tags-table                 | 选择使用的 tags 表 |
+
+** Variable
+| Variable        | Effect               |
+| tags-table-list | ctags 的文件索引列表 |
