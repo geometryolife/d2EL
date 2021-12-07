@@ -1,26 +1,46 @@
 * 学习使用 SPACEMACS
 ** 收获
-   1. fullscreen-at-startup 和 maximized-at-startup 区别?
-      前者全屏，后者最大化启动界面。
-   2. dotspacemacs-excluded-packages
-      把不想安装和加载的包添加到此。
-   3. dotspacemacs/user-config
-      在没有学会如何编写自己的 layer 之前，尽量把配置放在这个函数里。
-   4. use-package => defer t
-      defer 关键字要放在 init 前面。
-   5. layer 函数调用顺序
-      pre-init-PACKAGE => init-PACKAGE => post-init-PACKAGE。
-      如果 Spacemacs 自带了 PACKAGE 要自定义一些配置，通常设置最后一个即可。
-   6. find-file-in-project 插件
+1. fullscreen-at-startup 和 maximized-at-startup 区别?
+   前者全屏，后者最大化启动界面。
+2. dotspacemacs-excluded-packages
+   把不想安装和加载的包添加到此。
+3. dotspacemacs/user-config
+   在没有学会如何编写自己的 layer 之前，尽量把配置放在这个函数里。
+4. use-package => defer t
+   defer 关键字要放在 init 前面。
+5. layer 函数调用顺序
+   pre-init-PACKAGE => init-PACKAGE => post-init-PACKAGE。
+   如果 Spacemacs 自带了 PACKAGE 要自定义一些配置，通常设置最后一个即可。
+6. find-file-in-project 插件
+7. 当 Emacs 卡住时可以使用 pkill -SIGUSR2 -i emacs 来查明原因。
+   #+begin_src shell
+     # 在终端调用
+     pkill -SIGUSR2 -i emacs
+     # 在调用了上面的命令后，Emacs 会默认进入 debug 模式
+     # 每次调用 C-g 会进行 Debug，必须要退出才能正常使用
+     toggle-debug-on-quit
+   #+end_src
+8. Emacs 很慢，该如何改进和查明原因？
+   #+begin_src emacs-lisp
+     ;; 启用分析工具
+     profiler-start
+     ;; 在做了一些操作后，可以查看分析报告
+     profiler-report
+   #+end_src
+9. Emacs 启动时间分析
+   #+begin_src shell
+     emacs --timed-requires --profile
+   #+end_src
+
 ** 14th day
 *** 未加入的配置
-    1. SPC-p-f 没有配置进入我的配置
-       用 counsel-git 查找项目文件，类似 Vim 的 Ctrl-p 插件。
-    2. SPC-f-L 查找整个系统的文件
-    3. SPC-f-a-d 访问经常访问的目录
-    4. SPC-b-f 在 Mac 中的 Finder 打开
-    5. SPC-b-B 需要绑定为 ibuffer
-    6. SPC-b-k 使用正则表达式删除 buffer
+1. SPC-p-f 没有配置进入我的配置
+   用 counsel-git 查找项目文件，类似 Vim 的 Ctrl-p 插件。
+2. SPC-f-L 查找整个系统的文件
+3. SPC-f-a-d 访问经常访问的目录
+4. SPC-b-f 在 Mac 中的 Finder 打开
+5. SPC-b-B 需要绑定为 ibuffer
+6. SPC-b-k 使用正则表达式删除 buffer
 
 ** HotKeys
 *** SPC-TAB => Last buffer => 上一个缓冲区
@@ -44,7 +64,6 @@
 *** d
 | HotKey    | Command           | Effect   |
 | SPC-h-d-v | describe-variable | 描述变量 |
-|           |                   |          |
 
 *** f
 | HotKey    | Command                         | Effect                                 |
